@@ -16,7 +16,7 @@ if __name__ == "__main__":
             if data.get("username") in uifaces:
                 continue
             uifaces[data["username"]] = data["image_urls"]
-            progress.update(len(uifaces))
+            progress.update(1)
             time.sleep(0.1)
     with open("uifaces.json", "wb") as f:
         f.write(json.dumps(uifaces))
